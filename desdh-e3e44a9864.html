@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Trial review · Desdh</title>
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#121211; --surface-1:#1a1a19; --surface-2:#22221f; --line:#33332f; --grid:#2b2b28;
+  --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8f8e86;
+  --nik:#3987e5; --peer:#5f5e58; --peer-2:#7a7972; --ref:#c3c2b7;
+  --good:#0ca30c; --warn:#c98500; --bad:#e66767;
+  --shaman:#2a78d6;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text-primary);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:#86b6ef}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 20px 60px}
+header.hero{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:20px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
+h1{font-size:34px;margin:4px 0 2px;line-height:1.1}
+h1 small{font-size:16px;color:var(--text-secondary);font-weight:500;margin-left:8px}
+.sub{color:var(--text-secondary)}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;border:1px solid var(--line);font-size:12px;color:var(--text-secondary);margin-right:6px}
+.pill.trial{border-color:#c98500;color:#f0c46a}
+.verdict{background:var(--surface-1);border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:10px;padding:16px 18px;margin:22px 0}
+.verdict h2{margin:0 0 6px;font-size:18px}
+.verdict p{margin:6px 0;color:var(--text-secondary)}
+.verdict strong{color:var(--text-primary)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0 6px}
+.tile{background:var(--surface-1);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tile .v{font-size:26px;font-weight:650;line-height:1.1}
+.tile .l{font-size:12.5px;color:var(--text-secondary);margin-top:4px}
+section{margin-top:38px}
+section>h2{font-size:21px;margin:0 0 4px}
+section>.lead{color:var(--text-secondary);margin:0 0 14px;max-width:820px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:820px){.grid2,.grid3{grid-template-columns:1fr} header.hero{grid-template-columns:1fr}}
+.card{background:var(--surface-1);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card h3{margin:0 0 6px;font-size:15.5px}
+.card p,.card li{color:var(--text-secondary);font-size:14px}
+.card ul{margin:6px 0 0;padding-left:18px}
+.card li{margin:4px 0}
+.card .tag{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted)}
+.tone-good{border-top:3px solid var(--good)} .tone-bad{border-top:3px solid var(--bad)} .tone-warn{border-top:3px solid var(--warn)} .tone-info{border-top:3px solid var(--nik)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--grid);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);font-weight:600}
+td{color:var(--text-secondary)}
+td strong{color:var(--text-primary)}
+.tablewrap{overflow-x:auto;background:var(--surface-1);border:1px solid var(--line);border-radius:10px}
+.chart{background:var(--surface-1);border:1px solid var(--line);border-radius:10px;padding:14px 16px;position:relative}
+.chart h3{margin:0;font-size:15px}
+.chart .cap{font-size:12.5px;color:var(--text-muted);margin:2px 0 8px}
+.legend{display:flex;gap:14px;font-size:12.5px;color:var(--text-secondary);margin:4px 0 6px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+svg text{font-family:inherit}
+.tip{position:fixed;pointer-events:none;background:#0b0b0b;border:1px solid var(--line);color:var(--text-primary);font-size:12.5px;padding:7px 9px;border-radius:7px;opacity:0;transition:opacity .08s;z-index:10;max-width:260px}
+.note{font-size:12.5px;color:var(--text-muted);margin-top:8px}
+.ask li{margin:6px 0}
+
+.rec{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+@media (max-width:820px){.rec{grid-template-columns:1fr}}
+.opt{background:var(--surface-1);border:1px solid var(--line);border-radius:10px;padding:14px 16px;opacity:.6}
+.opt h3{margin:0 0 4px;font-size:16px;display:flex;align-items:center;gap:8px}
+.opt p{margin:4px 0;color:var(--text-secondary);font-size:13.5px}
+.opt.pick{opacity:1;border:2px solid var(--warn);background:#24211a}
+.opt .badge{font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:var(--warn);color:#1a1a19;font-weight:700}
+.why{margin-top:14px}
+footer{margin-top:44px;border-top:1px solid var(--line);padding-top:14px;font-size:13px;color:var(--text-muted)}
+footer a{color:var(--text-secondary)}
+.chip{display:inline-block;font-size:11.5px;padding:1px 7px;border-radius:5px;background:var(--surface-2);color:var(--text-secondary);margin-left:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">Reawaken · trial review · officers only · watch period</div>
+    <h1>Desdh <small>Demon Hunter · Havoc · Drenden · she/her · "Des" on the roster</small></h1>
+    <div class="sub" style="margin-top:8px">
+      <span class="pill trial">Watching: week 1 of about 3</span><span class="pill">1 night · 35 pulls</span><span class="pill">ilvl 329</span><span class="pill">Updated Mon Nov 16</span><span class="pill trial">Leaning: Main raider</span>
+    </div>
+  </div>
+</header>
+
+<div class="verdict">
+  <h2>Week 1: the damage is there, the deaths aren't fixed yet</h2>
+  <p><strong>Her damage was second among our melee on her first night</strong>, at 99% of the raid's DPS median, and that was with the second-lowest item level in the raid (329 against a raid median of 332). Melee is our thin side, and she's already on this week's board in group 1 as the C1 kicker.</p>
+  <p><strong>What has to change is how often she dies early.</strong> She was among the first four deaths 2.8 times per 10 pulls, against 1.8 for the raid middle (20th of 22). On five pulls she died to Vexhul's melee in the first 2–7 seconds. She used a healthstone on only 2 of 29 pulls and never pressed Darkness.</p>
+  <p><strong>This page grows each week.</strong> The tracker below gets a new row after every raid night, and the call at the end of the watch rests on the five targets.</p>
+</div>
+
+<div class="tiles" id="tiles"></div>
+
+<section id="recommendation">
+  <h2>Recommendation: Main raider, Bench, or Pass</h2>
+  <p class="lead">A provisional call after one night. It firms up as the tracker fills in.</p>
+  <div class="rec">
+    <div class="opt pick"><h3>Main raider <span class="badge">Leaning</span></h3><p>Her damage already fits a melee spot, and she's slotted as a C1 kicker. This becomes a firm yes if her early deaths drop to the raid middle over the next two weeks.</p></div>
+    <div class="opt"><h3>Bench</h3><p>The fallback if the deaths don't improve. The damage is good, but a melee who dies early on Twin Fangs costs us a Globule grabber, a Feast soaker and a kicker all at once.</p></div>
+    <div class="opt"><h3>Pass</h3><p>Nothing points here yet. It would take poor attendance, or no change after the deaths are raised with her directly.</p></div>
+  </div>
+  <div class="grid3 why">
+    <div class="card tone-good"><span class="tag">For main</span><h3>What she brings</h3>
+      <ul>
+        <li><strong>Damage:</strong> 99% of the DPS median on a typical pull, 2nd of 6 melee (Dishwasher 105%), at ilvl 329.</li>
+        <li><strong>Soaks and Globules at the raid middle:</strong> Feast soaks 0.71 a pull (raid 0.71), and Globule grabs about mid-raid by our count.</li>
+        <li><strong>Little avoidable damage:</strong> the least Deadly Venom and Coiling Ichor damage of any melee.</li>
+        <li><strong>A DPS potion every pull</strong> (29 of 29).</li>
+        <li><strong>Mythic experience:</strong> 4/10 with Timeless (12 kills), Heroic 10/10.</li>
+      </ul></div>
+    <div class="card tone-bad"><span class="tag">Against, for now</span><h3>What's holding it back</h3>
+      <ul>
+        <li><strong>Early deaths:</strong> 2.8 per 10 pulls against a 1.8 middle, 20th of 22. She was the first death on 3 pulls.</li>
+        <li><strong>Dying at the pull:</strong> killed by Vexhul's melee 1.5 s into pulls 7, 11, 12 and 18, and 7 s into pull 13. On pulls 7 and 18 she was battle-rezzed, which cost the raid its rez.</li>
+        <li><strong>Defensives:</strong> healthstone on 2 of 29 pulls, Blur on 7, and no Darkness all night.</li>
+        <li>Her Wipefest score was 21st of 22 (63 against a middle of 70).</li>
+      </ul></div>
+    <div class="card tone-warn"><span class="tag">How the call gets made</span><h3>Five targets by early December</h3>
+      <ol style="margin:6px 0 0;padding-left:18px;color:var(--text-secondary);font-size:14px">
+        <li style="margin:4px 0">Early deaths at or under the raid middle.</li>
+        <li style="margin:4px 0">No deaths in the first 10 seconds of a pull.</li>
+        <li style="margin:4px 0">Lands her C1 Visceral Burst kicks (new assignment this week).</li>
+        <li style="margin:4px 0">Healthstone in every pull that goes past the first Feast, and Darkness used where it's called.</li>
+        <li style="margin:4px 0">Damage stays at or above the DPS median.</li>
+      </ol>
+      <p style="margin-top:8px">4 or 5 met → main raider. 2 or 3 → bench. 0 or 1, or missed nights → pass.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Watch tracker</h2>
+  <p class="lead">One row per raid night. New nights get filled in after each raid. "Deaths &lt;10 s" counts pulls where she died in the first 10 seconds. "HS" means healthstone.</p>
+  <div class="tablewrap"><table id="tracker"></table></div>
+</section>
+
+<section>
+  <h2>How she fits with us</h2>
+  <div class="grid3">
+    <div class="card tone-info"><span class="tag">Spot</span><h3>Group 1 melee, C1 kicker</h3>
+      <ul>
+        <li>On this week's board as "Des" in group 1, next to Aroarian and Bungie.</li>
+        <li>She kicks the left center Broodling (C1), with Kegales as backup. If the bosses come up swapped, she keeps her side.</li>
+      </ul></div>
+    <div class="card tone-warn"><span class="tag">Buffs</span><h3>No new buff</h3>
+      <ul>
+        <li>Chaos Brand already comes from Soulrending. Bonehead is also a Demon Hunter this week.</li>
+        <li>What she can add is Darkness as a raid cooldown. It wasn't pressed on Nov 12, so ask whether she takes it, and put it on the healers' cooldown sheet if she does.</li>
+      </ul></div>
+    <div class="card tone-info"><span class="tag">Same source as Nikani</span><h3>Also from Timeless</h3>
+      <ul>
+        <li>She was a Timeless raider (Tue/Thu) through Oct 15, the same nights as us.</li>
+        <li>She has no logged kills from Oct 16 until her first night with us on Nov 12.</li>
+      </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>Night 1: Twin Fangs, Thu Nov 12</h2>
+  <p class="lead">All 35 pulls. Pulls under 30 s are left out of the damage numbers (29 counted).</p>
+  <div class="grid2">
+    <div class="chart" id="c-dps"><h3>Her damage vs the DPS median, each pull</h3><div class="cap">100% = the median of all DPS on that pull. Lighter bars are pulls where she died in the first 2 seconds.</div><div class="legend"><span><i style="background:var(--nik)"></i>Desdh</span><span><i style="background:var(--nik);opacity:.45"></i>died at the pull</span><span><i style="background:var(--ref);height:2px;width:14px;border-radius:0;vertical-align:3px"></i>DPS median (100%)</span></div><svg></svg></div>
+    <div class="chart" id="c-early"><h3>Early deaths per 10 pulls: our melee</h3><div class="cap">Lower is better. These are deaths among the first four of a pull.</div><div class="legend"><span><i style="background:var(--nik)"></i>Desdh</span><span><i style="background:var(--peer)"></i>other melee</span></div><svg></svg></div>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="card tone-bad"><h3>Deaths at the pull</h3><p>Vexhul's melee killed her <strong>1.5 s into pulls 7, 11, 12 and 18</strong>, and 7 s into pull 13. On those pulls, only one other player died that early (Mìssmurder on pull 11). It looks like she's in front of Vexhul, or ahead of the tank, at the pull. Pulls 11–13 were reset right after.</p></div>
+    <div class="card tone-warn"><h3>Kicks</h3><p>She landed <strong>1 Visceral Burst kick all night</strong> (Disrupt on 7 pulls). The regular kickers had 28–44. She wasn't on a kick assignment yet, though: the C1 spot was given to her after this night. This week is the real test.</p></div>
+    <div class="card tone-bad"><h3>Defensives</h3><p>Healthstone on <strong>2 of 29</strong> pulls. Wipefest put her healthstone and potion healing at about a tenth of the raid middle. Blur on 7 pulls, and no Darkness or Netherwalk.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Before us</h2>
+  <div class="grid2">
+    <div class="card"><h3>Timeless, Aug 20 – Oct 15</h3>
+      <ul>
+        <li><strong>Mythic 4/10, 12 kills, all with Timeless:</strong> best average 54.7, median 46.1. Nek'zali ×5 (best 37), Sentinels ×2 (68), Vashnik ×1, Lost Explorers ×4 (58).</li>
+        <li>On Oct 15 she played <strong>Devourer</strong> (the ranged Demon Hunter spec) for Sentinels, Vashnik and Timeless's first 6 Sszorak pulls. Everything else was Havoc.</li>
+        <li>Item level went from 305 in late August to 327 by mid-October. She was 329 with us.</li>
+      </ul></div>
+    <div class="card"><h3>Heroic</h3>
+      <ul>
+        <li><strong>10/10, 47 kills:</strong> best average 86.5, median 61.6.</li>
+        <li>Top Heroic parses: Nek'zali 97, Kith'ix 93, Vashnik 92, Lost Explorers 90, Twin Fangs 89, Coiled Altar 89.</li>
+        <li>Her last logged kill before us was Oct 15. There are no logged kills from then until Nov 12.</li>
+      </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>Ask her</h2>
+  <div class="card tone-info ask">
+    <ul>
+      <li>Is she done with Timeless, and what happened between mid-October and Nov 12?</li>
+      <li>What is she doing at the pull? Five early deaths to Vexhul's melee suggest she's in front of him or ahead of the tank.</li>
+      <li>Does she take Darkness? If so, we'll give it a slot (Feast or Deluge).</li>
+      <li>Is Havoc her main spec for us, or does she want to play Devourer?</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div>Built from our Warcraft Logs report <a href="https://www.warcraftlogs.com/reports/drqHy6BXaJgRc92N">Nov 12 Twin Fangs</a>, Wipefest, her character page (<a href="https://www.warcraftlogs.com/character/us/drenden/desdh">Desdh – Drenden</a>) and our Timeless review data.</div>
+  <div style="margin-top:6px">This page isn't linked from any other page. Share it by direct link with officers only.</div>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<script>
+const DATA = {"dmg": [{"night": "Nov 12", "np": 2, "pct": 102, "early_melee": false}, {"night": "Nov 12", "np": 3, "pct": 106, "early_melee": false}, {"night": "Nov 12", "np": 4, "pct": 104, "early_melee": false}, {"night": "Nov 12", "np": 5, "pct": 105, "early_melee": false}, {"night": "Nov 12", "np": 6, "pct": 98, "early_melee": false}, {"night": "Nov 12", "np": 7, "pct": 63, "early_melee": true}, {"night": "Nov 12", "np": 8, "pct": 101, "early_melee": false}, {"night": "Nov 12", "np": 9, "pct": 118, "early_melee": false}, {"night": "Nov 12", "np": 10, "pct": 89, "early_melee": false}, {"night": "Nov 12", "np": 15, "pct": 95, "early_melee": false}, {"night": "Nov 12", "np": 16, "pct": 106, "early_melee": false}, {"night": "Nov 12", "np": 17, "pct": 92, "early_melee": false}, {"night": "Nov 12", "np": 18, "pct": 59, "early_melee": true}, {"night": "Nov 12", "np": 19, "pct": 101, "early_melee": false}, {"night": "Nov 12", "np": 20, "pct": 107, "early_melee": false}, {"night": "Nov 12", "np": 21, "pct": 100, "early_melee": false}, {"night": "Nov 12", "np": 22, "pct": 88, "early_melee": false}, {"night": "Nov 12", "np": 23, "pct": 93, "early_melee": false}, {"night": "Nov 12", "np": 24, "pct": 100, "early_melee": false}, {"night": "Nov 12", "np": 25, "pct": 89, "early_melee": false}, {"night": "Nov 12", "np": 26, "pct": 99, "early_melee": false}, {"night": "Nov 12", "np": 27, "pct": 91, "early_melee": false}, {"night": "Nov 12", "np": 28, "pct": 56, "early_melee": false}, {"night": "Nov 12", "np": 29, "pct": 104, "early_melee": false}, {"night": "Nov 12", "np": 30, "pct": 108, "early_melee": false}, {"night": "Nov 12", "np": 31, "pct": 74, "early_melee": false}, {"night": "Nov 12", "np": 32, "pct": 86, "early_melee": false}, {"night": "Nov 12", "np": 33, "pct": 101, "early_melee": false}, {"night": "Nov 12", "np": 35, "pct": 93, "early_melee": false}], "early": {"Nov 12": {"rate": 2.8, "med": 1.8, "peers": {"Dishwasher": 2.8, "Drego": 1.9, "Aroarian": 1.7, "Riftan": 0.7, "Sol": 0.0}}}, "tracker": [{"night": "Thu Nov 12", "boss": "Twin Fangs", "pulls": "35", "dmg": "99%", "melee": "2nd of 6", "early": "2.8 vs 1.8", "fast": "5", "kicks": "1 (not assigned yet)", "hs": "2 of 29", "wf": "21st of 22", "done": true}, {"night": "Tue Nov 17", "done": false}, {"night": "Thu Nov 19", "done": false}, {"night": "Tue Nov 24", "done": false}, {"night": "Thu Nov 26", "done": false}, {"night": "Tue Dec 1", "done": false}, {"night": "Thu Dec 3", "done": false}]};
+const NS='http://www.w3.org/2000/svg';
+const tip=document.getElementById('tip');
+function showTip(e,html){tip.innerHTML=html;tip.style.opacity=1;const x=Math.min(e.clientX+14,innerWidth-270);tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px'}
+function hideTip(){tip.style.opacity=0}
+function el(tag,attrs,parent){const n=document.createElementNS(NS,tag);for(const k in attrs)n.setAttribute(k,attrs[k]);if(parent)parent.appendChild(n);return n}
+function txt(parent,x,y,s,attrs={}){const t=el('text',Object.assign({x,y,fill:'var(--text-secondary)','font-size':12},attrs),parent);t.textContent=s;return t}
+function cssv(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+
+
+const tiles=[
+ ['99%','of the DPS median on a typical pull, 2nd of 6 melee'],
+ ['2.8','early deaths per 10 pulls (raid middle 1.8, 20th of 22)'],
+ ['5','pulls where she died in the first 10 seconds'],
+ ['2 of 29','pulls with a healthstone'],
+ ['C1','her kick assignment, starting this week'],
+];
+document.getElementById('tiles').innerHTML=tiles.map(t=>`<div class="tile"><div class="v">${t[0]}</div><div class="l">${t[1]}</div></div>`).join('');
+const cols=[['night','Night'],['boss','Boss'],['pulls','Pulls'],['dmg','Damage vs DPS median'],['melee','Melee rank'],['early','Early deaths /10'],['fast','Deaths <10 s'],['kicks','Kicks'],['hs','HS pulls'],['wf','Wipefest']];
+document.getElementById('tracker').innerHTML='<thead><tr>'+cols.map(c=>`<th>${c[1]}</th>`).join('')+'</tr></thead><tbody>'+
+ DATA.tracker.map(r=>r.done?'<tr>'+cols.map((c,i)=>`<td>${i==0?'<strong>'+r[c[0]]+'</strong>':r[c[0]]}</td>`).join('')+'</tr>'
+   :`<tr><td><strong>${r.night}</strong></td><td colspan="${cols.length-1}" style="color:var(--text-muted)">To come</td></tr>`).join('')+'</tbody>';
+(function(){
+ const box=document.querySelector('#c-dps svg');const W=500,H=240,m={l:40,r:10,t:10,b:28};box.setAttribute('viewBox',`0 0 ${W} ${H}`);box.setAttribute('width','100%');
+ const d=DATA.dmg;const iw=W-m.l-m.r,ih=H-m.t-m.b;const max=130,min=0;const y=v=>m.t+ih-(v-min)/(max-min)*ih;
+ for(const g of [0,50,100]){el('line',{x1:m.l,x2:W-m.r,y1:y(g),y2:y(g),stroke:'var(--grid)'},box);txt(box,m.l-6,y(g)+4,g+'%',{'text-anchor':'end',fill:'var(--text-muted)','font-size':11})}
+ const gap=2,nb=d.length;const bw=(iw-gap*nb)/nb;let x=m.l;
+ d.forEach(p=>{const h=y(min)-y(p.pct);el('path',{d:`M${x},${y(min)} v${-(h-4)} q0,-4 4,-4 h${bw-8} q4,0 4,4 v${h-4} z`,fill:'var(--nik)',opacity:p.early_melee?.45:.9},box);
+   const hit=el('rect',{x:x-1,y:m.t,width:bw+2,height:ih,fill:'transparent'},box);
+   hit.addEventListener('mousemove',e=>showTip(e,`<b>${p.night} pull ${p.np}</b><br>${p.pct}% of the DPS median${p.early_melee?'<br>Died to Vexhul melee at 1.5 s':''}`));hit.addEventListener('mouseleave',hideTip);x+=bw+gap;});
+ txt(box,m.l,H-6,'Nov 12, pulls 2–35',{fill:'var(--text-muted)','font-size':11});
+ el('line',{x1:m.l,x2:W-m.r,y1:y(100),y2:y(100),stroke:'var(--ref)','stroke-width':1.5,'stroke-dasharray':'4 3'},box);
+})();
+function hbars(sel,groups,fmt,maxv){
+ const box=document.querySelector(sel+' svg');const rowH=22,gh=26;let H=10;groups.forEach(g=>H+=gh+g.items.length*rowH+6);const W=500,lw=96,rw=50;
+ box.setAttribute('viewBox',`0 0 ${W} ${H}`);box.setAttribute('width','100%');let yy=8;
+ groups.forEach(g=>{txt(box,0,yy+15,g.title,{fill:'var(--text-primary)','font-size':12.5,'font-weight':600});yy+=gh;
+  const iw=W-lw-rw;const sx=v=>lw+v/maxv*iw;
+  if(g.ref!=null){el('line',{x1:sx(g.ref),x2:sx(g.ref),y1:yy-4,y2:yy+g.items.length*rowH,stroke:'var(--ref)','stroke-dasharray':'3 3'},box);txt(box,sx(g.ref)+3,yy-6,'raid middle '+fmt(g.ref),{fill:'var(--text-muted)','font-size':10.5})}
+  g.items.forEach(it=>{const isN=it.name==='Desdh';
+   txt(box,lw-8,yy+14,it.name,{'text-anchor':'end',fill:isN?'var(--text-primary)':'var(--text-secondary)','font-weight':isN?650:400});
+   const w=Math.max(2,sx(it.v)-lw);
+   if(it.v>0){el('path',{d:`M${lw},${yy+3} h${Math.max(0,w-4)} q4,0 4,4 v8 q0,4 -4,4 h${-Math.max(0,w-4)} z`,fill:isN?'var(--nik)':'var(--peer)'},box)} else {el('line',{x1:lw,x2:lw,y1:yy+3,y2:yy+19,stroke:'var(--peer-2)','stroke-width':2},box)}
+   txt(box,lw+w+6,yy+15,fmt(it.v),{fill:isN?'var(--text-primary)':'var(--text-secondary)','font-size':11.5});
+   const hit=el('rect',{x:0,y:yy,width:W,height:rowH,fill:'transparent'},box);hit.addEventListener('mousemove',e=>showTip(e,`<b>${it.name}</b> · ${g.title}<br>${fmt(it.v)} early deaths per 10 pulls`));hit.addEventListener('mouseleave',hideTip);
+   yy+=rowH;});
+  yy+=6;});
+}
+hbars('#c-early',Object.entries(DATA.early).map(([k,o])=>({title:k+' · 29 pulls',ref:o.med,items:Object.entries(o.peers).map(([n,v])=>({name:n,v})).concat([{name:'Desdh',v:o.rate}]).sort((a,b)=>a.v-b.v)})),v=>v.toFixed(1),4);
+</script>
+</body>
+</html>
