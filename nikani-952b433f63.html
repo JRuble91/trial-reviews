@@ -61,6 +61,15 @@ svg text{font-family:inherit}
 .tip{position:fixed;pointer-events:none;background:#0b0b0b;border:1px solid var(--line);color:var(--text-primary);font-size:12.5px;padding:7px 9px;border-radius:7px;opacity:0;transition:opacity .08s;z-index:10;max-width:260px}
 .note{font-size:12.5px;color:var(--text-muted);margin-top:8px}
 .ask li{margin:6px 0}
+
+.rec{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+@media (max-width:820px){.rec{grid-template-columns:1fr}}
+.opt{background:var(--surface-1);border:1px solid var(--line);border-radius:10px;padding:14px 16px;opacity:.6}
+.opt h3{margin:0 0 4px;font-size:16px;display:flex;align-items:center;gap:8px}
+.opt p{margin:4px 0;color:var(--text-secondary);font-size:13.5px}
+.opt.pick{opacity:1;border:2px solid var(--warn);background:#24211a}
+.opt .badge{font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:var(--warn);color:#1a1a19;font-weight:700}
+.why{margin-top:14px}
 footer{margin-top:44px;border-top:1px solid var(--line);padding-top:14px;font-size:13px;color:var(--text-muted)}
 footer a{color:var(--text-secondary)}
 .chip{display:inline-block;font-size:11.5px;padding:1px 7px;border-radius:5px;background:var(--surface-2);color:var(--text-secondary);margin-left:4px}
@@ -74,7 +83,7 @@ footer a{color:var(--text-secondary)}
     <div class="eyebrow">Reawaken · trial review · officers only</div>
     <h1>Nikani <small>Shaman · Elemental / Restoration · Sargeras · she/her</small></h1>
     <div class="sub" style="margin-top:8px">
-      <span class="pill trial">Trial since Tue Nov 3</span><span class="pill">4 nights · 82 pulls</span><span class="pill">ilvl 332</span><span class="pill">Updated Mon Nov 16</span>
+      <span class="pill trial">Trial since Tue Nov 3</span><span class="pill">4 nights · 82 pulls</span><span class="pill">ilvl 332</span><span class="pill">Updated Mon Nov 16</span><span class="pill trial">Recommendation: Bench</span>
     </div>
   </div>
 </header>
@@ -83,10 +92,45 @@ footer a{color:var(--text-secondary)}
   <h2>Where she stands: a useful flex player, not ahead of anyone yet</h2>
   <p><strong>She has filled whatever spot was open on all four nights</strong>: ranged DPS on Sszorak (including the kill), then Gladrix's healing spot on Twin Fangs. That flexibility is the real value.</p>
   <p><strong>The numbers put her at the bottom of each group she's played in.</strong> As Elemental, her damage was mid-pack (about 95% of our ranged median), but she died early 1.5 to 2 times as often as the raid middle. As Restoration, she did the least healing of the four healers on both Twin Fangs nights. She also had the lowest overhealing, so she isn't wasting casts, she's just behind on output.</p>
-  <p><strong>The fixable part is mechanics.</strong> On Sszorak she took more tornado (Tempest) debuffs than any other ranged player. On Twin Fangs she grabbed the fewest Globules in the raid. Healers also skipped potions. Keep her on the trial as a healer first. Re-check after two more Twin Fangs nights on three things: Globule grabs, a potion every pull, and Spirit Link use.</p>
+  <p><strong>The fixable part is mechanics.</strong> On Sszorak she took more tornado (Tempest) debuffs than any other ranged player. On Twin Fangs she grabbed the fewest Globules in the raid. Healers also skipped potions. Our call: <strong>Bench</strong>, as flex cover with healing first (see the recommendation below). Re-check after two more Twin Fangs nights on three things: Globule grabs, a potion every pull, and Spirit Link use.</p>
 </div>
 
 <div class="tiles" id="tiles"></div>
+
+<section id="recommendation">
+  <h2>Recommendation: Main raider, Bench, or Pass</h2>
+  <p class="lead">Our call after four nights, and why. The other two cards say what would change it.</p>
+  <div class="rec">
+    <div class="opt"><h3>Main raider</h3><p>Not yet. To get here she'd need to stop being the lowest in every group she plays in, either as a healer or as ranged.</p></div>
+    <div class="opt pick"><h3>Bench <span class="badge">Our pick</span></h3><p>Keep her as flex bench, healer first. She covers heals or ranged on any night, and she has shown up for all four. Re-check after two more Twin Fangs nights.</p></div>
+    <div class="opt"><h3>Pass</h3><p>Not justified. Her healing is low but efficient, her deaths as a healer are normal, and the gaps are habits we can coach.</p></div>
+  </div>
+  <div class="grid3 why">
+    <div class="card tone-good"><span class="tag">Why not pass</span><h3>She's worth keeping</h3>
+      <ul>
+        <li><strong>Attendance and flex:</strong> 4 of 4 nights since Nov 3. She took whatever spot was open: Execcuttie's, ranged on the kill, Gladrix's heals.</li>
+        <li><strong>A clean healer:</strong> the lowest overheal of the four both nights (27–32%). On Nov 12 her early deaths were normal (1.7 vs 1.8 middle).</li>
+        <li><strong>Experience:</strong> 124 Sszorak pulls with Timeless before us, 5/10 Mythic as Elemental, and Heroic 10/10 with strong parses (median 67).</li>
+        <li><strong>A second Shaman</strong> gives us a backup Spirit Link and Reincarnation. If Aeryx or Gladrix is out, she slots straight in.</li>
+      </ul></div>
+    <div class="card tone-bad"><span class="tag">Why not main</span><h3>She's last in each role</h3>
+      <ul>
+        <li><strong>Healing:</strong> 4th of 4 both nights (17% and 19% of healer healing). Even against Aeryx, the same spec, she's at 70–92% of his output.</li>
+        <li><strong>Elemental:</strong> about 95% of the ranged median, but she died early 1.5–2× the raid middle. Her Wipefest score was the lowest in the raid both Sszorak nights.</li>
+        <li><strong>Mechanics:</strong> the most tornado debuffs of any ranged player on Sszorak, and the fewest Globule grabs in the raid on Twin Fangs.</li>
+        <li><strong>Consumables:</strong> no healthstones as a healer, and almost no potions.</li>
+        <li>Nobody on the roster would come out for her: Aeryx, Yanessa and Bail all out-healed her on the same pulls, and Gladrix is the one she's been covering for.</li>
+      </ul></div>
+    <div class="card tone-warn"><span class="tag">What changes the call</span><h3>Up to main, or down to pass</h3>
+      <ul>
+        <li><strong>Up to main:</strong> over the next two Twin Fangs nights she grabs Globules at the raid middle (about 70% of rounds), uses a potion and a healthstone every pull, and gets her healing share within a few points of Aeryx's. Or a healing spot opens (Gladrix still out, someone leaves).</li>
+        <li><strong>Down to pass:</strong> she's still raiding with Timeless on our nights, or the Globule and consumable numbers don't move after being told directly.</li>
+        <li>If she'd rather be judged as Elemental, that's a ranged bench spot. Her early deaths have to come down first.</li>
+      </ul></div>
+  </div>
+</section>
+
+
 
 <section>
   <h2>How she fits with us</h2>
